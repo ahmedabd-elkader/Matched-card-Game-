@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flip It Out</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header><h1>Flip It Out</h1></header>
+  <nav>
+    <ul>
+      <li><a href="leaderboard.html">Leaderboard</a></li>
+      <li><a href="instructions.html">Instructions</a></li>
+      <li><a href="settings.html">Settings</a></li>
+    </ul>
+  </nav>
+  <section class="controls">
+    <label for="themeSelect">Theme:</label>
+    <select id="themeSelect">
+      <option value="animals">Animals</option>
+      <option value="fruits">Fruits</option>
+      <option value="numbers">Numbers</option>
+    </select>
+    <label for="difficultySelect">Difficulty:</label>
+    <select id="difficultySelect">
+      <option value="easy">Easy (4x4)</option>
+      <option value="medium">Medium (6x6)</option>
+      <option value="hard">Hard (8x8)</option>
+    </select>
+    <button id="startBtn">Start Game</button>
+    <button id="restartBtn">Restart</button>
+    <div class="status">
+      <span>Moves: <span id="moveCounter">0</span></span>
+      <span>Time: <span id="timer">00:00</span></span>
+    </div>
+  </section>
+  <section id="gameBoard" class="board"></section>
+  <audio id="flipSound" src="sounds/filp.mp4"></audio>
+  <audio id="matchSound" src="sounds/Matched.mpeg"></audio>
+  <audio id="startSound" src="sounds/Start.mpeg"></audio>
+  <audio id="endSound" src="sounds/End.mpeg"></audio>
+  <script src="script.js"></script>
+</body>
+</html>

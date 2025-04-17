@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Settings</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header><h1>Settings</h1></header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Back to Game</a></li>
+    </ul>
+  </nav>
+
+ 
+
+  <main>
+    <label>
+      <input type="checkbox" id="muteToggle" />
+      Mute Sounds
+    </label>
+  </main>
+
+  <script >
+    var muteToggle = document.getElementById("muteToggle");
+    if (localStorage.getItem("mute") === "true") {
+      muteToggle.checked = true;
+    }
+    muteToggle.onchange = function () {
+      var muted = muteToggle.checked;
+      localStorage.setItem("mute", muted ? "true" : "false");
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #2a3d66, #212121); 
+    color: #f5f5f5; 
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  header {
+    background: #1d2b42;
+    padding: 1.5rem;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+  nav ul {
+    display: flex;
+    justify-content: center;
+    background-color: #212121; 
+    list-style: none;
+    padding: 0.8rem 0;
+  }
+  nav ul li a {
+    color: #f5f5f5;
+    padding: 1rem 1.8rem;
+    margin: 0 0.5rem;
+    display: block;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+    font-size: 1.1rem;
+  }
+  nav ul li a:hover {
+    background-color: #3b4f76; 
+    transform: scale(1.05);
+  }
+  .controls {
+    margin: 3rem auto;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.7); 
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    display: inline-block;
+    color: #f5f5f5;
+  }
+  .controls label {
+    margin-right: 0.8rem;
+    font-weight: 500;
+  }
+  .controls select, .controls button {
+    padding: 0.7rem 1.2rem;
+    margin: 0.7rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #4a90e2; 
+    color: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .controls button:hover {
+    background-color: #3b74b8;
+  }
+  .controls select:focus, .controls button:focus {
+    outline: none;
+  }
+  .status {
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #e6e6e6; 
+  }
+  .board {
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.6); 
+    max-width: 90vw;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+  .board.easy { grid-template-columns: repeat(4, 100px); }
+  .board.medium { grid-template-columns: repeat(6, 80px); }
+  .board.hard { grid-template-columns: repeat(8, 65px); }
+  .card {
+    background-color: #333; 
+    border-radius: 10px;
+    width: 100%;
+    aspect-ratio: 1;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #f5f5f5;
+    transition: transform 0.4s ease, background 0.3s, box-shadow 0.3s;
+    user-select: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  }
+  .card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  .card.flipped {
+    background-color: #4a90e2; 
+    color: #212121;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  @media (max-width: 600px) {
+    .board.easy { grid-template-columns: repeat(4, 70px); }
+    .board.medium { grid-template-columns: repeat(6, 60px); }
+    .board.hard { grid-template-columns: repeat(8, 50px); }
+    .card {
+      font-size: 1.8rem;
+    }
+    .controls select, .controls button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+    }
+  }
+  main {
+    padding: 2.5rem;
+    margin-top: 3rem;
+    background: #333;
+    border-radius: 14px;
+    width: 90%;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    color: #f5f5f5;
+  }
+  main label {
+    font-size: 1.3rem;
+    color: #e6e6e6; 
+  }
+  
